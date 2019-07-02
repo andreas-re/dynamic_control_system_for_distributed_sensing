@@ -1,0 +1,17 @@
+{
+	"deployment_name": "deployment_name",
+	"mqtt_server": "localhost",
+	"mqtt_port": 1883,
+	"client_socket_port": 3001,
+	"clients": {
+		"ID0": {
+			"available-measurands": ["temperature"]
+		},
+		"ID1": {
+			"available-measurands": ["temperature"]
+		},
+		"ID2": {
+			"available-measurands": ["pressure"]
+		}
+	}
+}

@@ -1,0 +1,16 @@
+Get single temperature value from BMP180 sensor:
+./mqtt_client start-id ID0 custom \
+"bmp180 = require 'bmp180'; return bmp180.temperature(1);"
+
+Get temperature values from BMP180 sensor regularly:
+./mqtt_client start-id ID0 custom \
+"interval_ms = 1000; duration = 500; dle = require 'dle'; interval = math.floor(interval_ms/10); return dle.net(1, interval, duration, dle.temperature(2, interval, duration));"
+
+Stop getting regular temperature values:
+./mqtt_client stop-id ID0 <REQUEST_ID>
+The <REQUEST_ID> is the 'MQTT request id' which is printed by the mqtt_client when starting a task.
+
+Get regular values from the MQ2 gas sensor, but only if the ultrasonic detects an object which is at most <distance_threshold> cm away.
+This threshold is set in the Lua script and is '30' in this example:
+./mqtt_client start-id ID0 custom \
+"distance_threshold = 30; interval_ms = 500; duration = 500; dle = require 'dle'; interval = math.floor(interval_ms/10); return dle.net_dynamic(1, interval, duration, distance_threshold, dle.co2(2, interval, duration));"

@@ -1,0 +1,8 @@
+/control_application/*.o
+/control_application/server_main
+
+/mqtt_client/*.o
+/mqtt_client/mqtt_client
+
+/NDEE_dynamic_control_system/NDEE/build/
+

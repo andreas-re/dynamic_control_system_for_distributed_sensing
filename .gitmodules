@@ -1,0 +1,3 @@
+[submodule "NDEE_dynamic_control_system/NDEE/components/msgpack/msgpack-c"]
+	path = NDEE_dynamic_control_system/NDEE/components/msgpack/msgpack-c
+	url = git@github.com:msgpack/msgpack-c.git
